@@ -1,6 +1,13 @@
 # github.com/BurntSushi/toml v0.3.1
 github.com/BurntSushi/toml
-# github.com/Knetic/govaluate v3.0.0+incompatible
+# github.com/Hyperledger-TWGC/tjfoc-gm v0.0.0-20210222084201-e65875425ad3
+github.com/Hyperledger-TWGC/tjfoc-gm/gmtls
+github.com/Hyperledger-TWGC/tjfoc-gm/gmtls/gmcredentials
+github.com/Hyperledger-TWGC/tjfoc-gm/sm2
+github.com/Hyperledger-TWGC/tjfoc-gm/sm3
+github.com/Hyperledger-TWGC/tjfoc-gm/sm4
+github.com/Hyperledger-TWGC/tjfoc-gm/x509
+# github.com/Knetic/govaluate v3.0.1-0.20170926212237-aa73cfd04eeb+incompatible
 ## explicit
 github.com/Knetic/govaluate
 # github.com/VividCortex/gohistogram v1.0.0
@@ -19,7 +26,7 @@ github.com/beorn7/perks/quantile
 github.com/bgentry/speakeasy
 # github.com/cespare/xxhash/v2 v2.1.1
 github.com/cespare/xxhash/v2
-# github.com/cloudflare/cfssl v1.4.1
+# github.com/cloudflare/cfssl v1.5.0
 ## explicit
 github.com/cloudflare/cfssl/api
 github.com/cloudflare/cfssl/auth
@@ -157,6 +164,8 @@ github.com/go-logfmt/logfmt
 github.com/gogo/protobuf/gogoproto
 github.com/gogo/protobuf/proto
 github.com/gogo/protobuf/protoc-gen-gogo/descriptor
+# github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
+github.com/golang/glog
 # github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e
 github.com/golang/groupcache/lru
 # github.com/golang/mock v1.4.4
@@ -183,6 +192,9 @@ github.com/google/btree
 # github.com/google/certificate-transparency-go v1.1.1
 github.com/google/certificate-transparency-go
 github.com/google/certificate-transparency-go/asn1
+github.com/google/certificate-transparency-go/client
+github.com/google/certificate-transparency-go/client/configpb
+github.com/google/certificate-transparency-go/jsonclient
 github.com/google/certificate-transparency-go/tls
 github.com/google/certificate-transparency-go/x509
 github.com/google/certificate-transparency-go/x509/pkix
@@ -234,8 +246,167 @@ github.com/hyperledger/fabric-protos-go/orderer
 github.com/hyperledger/fabric-protos-go/orderer/etcdraft
 github.com/hyperledger/fabric-protos-go/peer
 github.com/hyperledger/fabric-protos-go/peer/lifecycle
+# github.com/hyperledger/fabric-sdk-go v1.0.0 => ./fabric-sdk-go-v1.0.0-gm
+## explicit
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric-ca/lib
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric-ca/lib/attrmgr
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric-ca/lib/client/credential
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric-ca/lib/client/credential/x509
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric-ca/lib/gmsigner
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric-ca/lib/gmtls
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric-ca/lib/streamer
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric-ca/sdkinternal/pkg/api
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric-ca/sdkinternal/pkg/util
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric-ca/sdkpatch/cryptosuitebridge
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric-ca/sdkpatch/keyutil
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric-ca/sdkpatch/logbridge
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/bccsp
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/bccsp/factory/gm
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/bccsp/factory/pkcs11
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/bccsp/factory/sw
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/bccsp/gm
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/bccsp/pkcs11
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/bccsp/signer
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/bccsp/sw
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/bccsp/utils
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/common/capabilities
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/common/channelconfig
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/common/configtx
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/common/crypto
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/common/genesis
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/common/metrics
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/common/metrics/disabled
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/common/metrics/internal/namer
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/common/metrics/prometheus
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/common/metrics/statsd
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/common/metrics/statsd/goruntime
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/common/policies
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/common/policydsl
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/common/util
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/core/common/ccprovider
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/rwsetutil
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/core/middleware
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/core/operations
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/discovery/client
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/discovery/protoext
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/gossip/protoext
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/msp
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/msp/cache
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/protoutil
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/sdkinternal/configtxgen/encoder
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/sdkinternal/configtxgen/genesisconfig
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/sdkinternal/configtxlator/update
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/sdkinternal/pkg/comm
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/sdkinternal/pkg/identity
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/sdkinternal/pkg/txflags
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/sdkpatch/cachebridge
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/sdkpatch/cryptosuitebridge
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/sdkpatch/logbridge
+github.com/hyperledger/fabric-sdk-go/internal/github.com/hyperledger/fabric/sdkpatch/logbridge/httpadmin
+github.com/hyperledger/fabric-sdk-go/pkg/client/channel
+github.com/hyperledger/fabric-sdk-go/pkg/client/channel/invoke
+github.com/hyperledger/fabric-sdk-go/pkg/client/common/discovery
+github.com/hyperledger/fabric-sdk-go/pkg/client/common/discovery/dynamicdiscovery
+github.com/hyperledger/fabric-sdk-go/pkg/client/common/discovery/greylist
+github.com/hyperledger/fabric-sdk-go/pkg/client/common/discovery/staticdiscovery
+github.com/hyperledger/fabric-sdk-go/pkg/client/common/filter
+github.com/hyperledger/fabric-sdk-go/pkg/client/common/random
+github.com/hyperledger/fabric-sdk-go/pkg/client/common/selection/balancer
+github.com/hyperledger/fabric-sdk-go/pkg/client/common/selection/dynamicselection
+github.com/hyperledger/fabric-sdk-go/pkg/client/common/selection/dynamicselection/pgresolver
+github.com/hyperledger/fabric-sdk-go/pkg/client/common/selection/fabricselection
+github.com/hyperledger/fabric-sdk-go/pkg/client/common/selection/options
+github.com/hyperledger/fabric-sdk-go/pkg/client/common/selection/sorter/balancedsorter
+github.com/hyperledger/fabric-sdk-go/pkg/client/common/selection/sorter/blockheightsorter
+github.com/hyperledger/fabric-sdk-go/pkg/client/common/verifier
+github.com/hyperledger/fabric-sdk-go/pkg/client/event
+github.com/hyperledger/fabric-sdk-go/pkg/client/msp
+github.com/hyperledger/fabric-sdk-go/pkg/common/errors/multi
+github.com/hyperledger/fabric-sdk-go/pkg/common/errors/retry
+github.com/hyperledger/fabric-sdk-go/pkg/common/errors/status
+github.com/hyperledger/fabric-sdk-go/pkg/common/logging
+github.com/hyperledger/fabric-sdk-go/pkg/common/options
+github.com/hyperledger/fabric-sdk-go/pkg/common/providers/context
+github.com/hyperledger/fabric-sdk-go/pkg/common/providers/core
+github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab
+github.com/hyperledger/fabric-sdk-go/pkg/common/providers/msp
+github.com/hyperledger/fabric-sdk-go/pkg/common/providers/test/mockfab
+github.com/hyperledger/fabric-sdk-go/pkg/context
+github.com/hyperledger/fabric-sdk-go/pkg/core/config
+github.com/hyperledger/fabric-sdk-go/pkg/core/config/comm
+github.com/hyperledger/fabric-sdk-go/pkg/core/config/comm/gmtls
+github.com/hyperledger/fabric-sdk-go/pkg/core/config/comm/tls
+github.com/hyperledger/fabric-sdk-go/pkg/core/config/cryptoutil
+github.com/hyperledger/fabric-sdk-go/pkg/core/config/endpoint
+github.com/hyperledger/fabric-sdk-go/pkg/core/config/lookup
+github.com/hyperledger/fabric-sdk-go/pkg/core/cryptosuite
+github.com/hyperledger/fabric-sdk-go/pkg/core/cryptosuite/bccsp/gm
+github.com/hyperledger/fabric-sdk-go/pkg/core/cryptosuite/bccsp/multisuite
+github.com/hyperledger/fabric-sdk-go/pkg/core/cryptosuite/bccsp/pkcs11
+github.com/hyperledger/fabric-sdk-go/pkg/core/cryptosuite/bccsp/sw
+github.com/hyperledger/fabric-sdk-go/pkg/core/cryptosuite/bccsp/wrapper
+github.com/hyperledger/fabric-sdk-go/pkg/core/cryptosuite/common/pkcs11
+github.com/hyperledger/fabric-sdk-go/pkg/core/logging/api
+github.com/hyperledger/fabric-sdk-go/pkg/core/logging/metadata
+github.com/hyperledger/fabric-sdk-go/pkg/core/logging/modlog
+github.com/hyperledger/fabric-sdk-go/pkg/core/mocks
+github.com/hyperledger/fabric-sdk-go/pkg/fab
+github.com/hyperledger/fabric-sdk-go/pkg/fab/channel
+github.com/hyperledger/fabric-sdk-go/pkg/fab/channel/membership
+github.com/hyperledger/fabric-sdk-go/pkg/fab/chconfig
+github.com/hyperledger/fabric-sdk-go/pkg/fab/comm
+github.com/hyperledger/fabric-sdk-go/pkg/fab/discovery
+github.com/hyperledger/fabric-sdk-go/pkg/fab/discovery/mocks
+github.com/hyperledger/fabric-sdk-go/pkg/fab/events/api
+github.com/hyperledger/fabric-sdk-go/pkg/fab/events/client
+github.com/hyperledger/fabric-sdk-go/pkg/fab/events/client/dispatcher
+github.com/hyperledger/fabric-sdk-go/pkg/fab/events/client/lbp
+github.com/hyperledger/fabric-sdk-go/pkg/fab/events/client/peerresolver
+github.com/hyperledger/fabric-sdk-go/pkg/fab/events/client/peerresolver/balanced
+github.com/hyperledger/fabric-sdk-go/pkg/fab/events/client/peerresolver/minblockheight
+github.com/hyperledger/fabric-sdk-go/pkg/fab/events/client/peerresolver/preferorg
+github.com/hyperledger/fabric-sdk-go/pkg/fab/events/deliverclient
+github.com/hyperledger/fabric-sdk-go/pkg/fab/events/deliverclient/connection
+github.com/hyperledger/fabric-sdk-go/pkg/fab/events/deliverclient/dispatcher
+github.com/hyperledger/fabric-sdk-go/pkg/fab/events/deliverclient/seek
+github.com/hyperledger/fabric-sdk-go/pkg/fab/events/endpoint
+github.com/hyperledger/fabric-sdk-go/pkg/fab/events/service
+github.com/hyperledger/fabric-sdk-go/pkg/fab/events/service/blockfilter
+github.com/hyperledger/fabric-sdk-go/pkg/fab/events/service/dispatcher
+github.com/hyperledger/fabric-sdk-go/pkg/fab/events/service/mocks
+github.com/hyperledger/fabric-sdk-go/pkg/fab/keyvaluestore
+github.com/hyperledger/fabric-sdk-go/pkg/fab/mocks
+github.com/hyperledger/fabric-sdk-go/pkg/fab/orderer
+github.com/hyperledger/fabric-sdk-go/pkg/fab/peer
+github.com/hyperledger/fabric-sdk-go/pkg/fab/resource
+github.com/hyperledger/fabric-sdk-go/pkg/fab/resource/genesisconfig
+github.com/hyperledger/fabric-sdk-go/pkg/fab/signingmgr
+github.com/hyperledger/fabric-sdk-go/pkg/fab/txn
+github.com/hyperledger/fabric-sdk-go/pkg/fabsdk
+github.com/hyperledger/fabric-sdk-go/pkg/fabsdk/api
+github.com/hyperledger/fabric-sdk-go/pkg/fabsdk/factory/defcore
+github.com/hyperledger/fabric-sdk-go/pkg/fabsdk/factory/defmsp
+github.com/hyperledger/fabric-sdk-go/pkg/fabsdk/factory/defsvc
+github.com/hyperledger/fabric-sdk-go/pkg/fabsdk/metrics
+github.com/hyperledger/fabric-sdk-go/pkg/fabsdk/metrics/cfg
+github.com/hyperledger/fabric-sdk-go/pkg/fabsdk/provider/chpvdr
+github.com/hyperledger/fabric-sdk-go/pkg/fabsdk/provider/fabpvdr
+github.com/hyperledger/fabric-sdk-go/pkg/fabsdk/provider/msppvdr
+github.com/hyperledger/fabric-sdk-go/pkg/gateway
+github.com/hyperledger/fabric-sdk-go/pkg/msp
+github.com/hyperledger/fabric-sdk-go/pkg/msp/api
+github.com/hyperledger/fabric-sdk-go/pkg/msp/test/mockmsp
+github.com/hyperledger/fabric-sdk-go/pkg/util/concurrent/futurevalue
+github.com/hyperledger/fabric-sdk-go/pkg/util/concurrent/lazycache
+github.com/hyperledger/fabric-sdk-go/pkg/util/concurrent/lazyref
+github.com/hyperledger/fabric-sdk-go/pkg/util/concurrent/rollingcounter
+github.com/hyperledger/fabric-sdk-go/pkg/util/pathvar
+github.com/hyperledger/fabric-sdk-go/pkg/util/test
+github.com/hyperledger/fabric-sdk-go/test/metadata
 # github.com/inconshreveable/mousetrap v1.0.0
 github.com/inconshreveable/mousetrap
+# github.com/jmoiron/sqlx v1.2.0
+github.com/jmoiron/sqlx/types
 # github.com/jonboulle/clockwork v0.2.0
 github.com/jonboulle/clockwork
 # github.com/json-iterator/go v1.1.10
@@ -262,7 +433,7 @@ github.com/modern-go/concurrent
 github.com/modern-go/reflect2
 # github.com/olekukonko/tablewriter v0.0.2
 github.com/olekukonko/tablewriter
-# github.com/pelletier/go-toml v1.2.0
+# github.com/pelletier/go-toml v1.8.0
 github.com/pelletier/go-toml
 # github.com/pkg/errors v0.8.1
 ## explicit
@@ -292,7 +463,7 @@ github.com/shurcooL/sanitized_anchor_name
 github.com/sirupsen/logrus
 # github.com/soheilhy/cmux v0.1.4
 github.com/soheilhy/cmux
-# github.com/spf13/afero v1.1.2
+# github.com/spf13/afero v1.3.1
 github.com/spf13/afero
 github.com/spf13/afero/mem
 # github.com/spf13/cast v1.3.1 => ./spf13/cast
@@ -300,7 +471,7 @@ github.com/spf13/afero/mem
 github.com/spf13/cast
 # github.com/spf13/cobra v0.0.5 => ./spf13/cobra
 github.com/spf13/cobra
-# github.com/spf13/jwalterweatherman v1.0.0 => ./spf13/jwalterweatherman
+# github.com/spf13/jwalterweatherman v1.1.0 => ./spf13/jwalterweatherman
 github.com/spf13/jwalterweatherman
 # github.com/spf13/pflag v1.0.5 => ./spf13/pflag
 github.com/spf13/pflag
@@ -313,7 +484,7 @@ github.com/stretchr/testify/assert
 github.com/stretchr/testify/require
 # github.com/subosito/gotenv v1.2.0
 github.com/subosito/gotenv
-# github.com/tjfoc/gmsm v1.3.2 => ./tjfoc/gmsm
+# github.com/tjfoc/gmsm v1.4.0
 ## explicit
 github.com/tjfoc/gmsm/sm2
 github.com/tjfoc/gmsm/sm3
@@ -324,21 +495,34 @@ github.com/tjfoc/gmtls
 github.com/tjfoc/gmtls/gmcredentials
 # github.com/tmc/grpc-websocket-proxy v0.0.0-20200427203606-3cfed13b9966
 github.com/tmc/grpc-websocket-proxy/wsproxy
+# github.com/tw-bc-group/net-go-gm v0.0.0-20201030055721-5906b2d70408
+github.com/tw-bc-group/net-go-gm/http
+github.com/tw-bc-group/net-go-gm/http/httptrace
+github.com/tw-bc-group/net-go-gm/http/internal
+github.com/tw-bc-group/net-go-gm/http/internal/nettrace
 # github.com/urfave/cli v1.22.1
 github.com/urfave/cli
-# github.com/weppos/publicsuffix-go v0.5.0
+# github.com/weppos/publicsuffix-go v0.13.0
 github.com/weppos/publicsuffix-go/publicsuffix
 # github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2
 github.com/xiang90/probing
-# github.com/zmap/zcrypto v0.0.0-20191112190257-7f2fe6faf8cf
+# github.com/zmap/zcrypto v0.0.0-20200911161511-43ff0ea04f21
 github.com/zmap/zcrypto/json
 github.com/zmap/zcrypto/util
 github.com/zmap/zcrypto/x509
 github.com/zmap/zcrypto/x509/ct
 github.com/zmap/zcrypto/x509/pkix
-# github.com/zmap/zlint v1.1.0
-github.com/zmap/zlint/lints
-github.com/zmap/zlint/util
+# github.com/zmap/zlint/v2 v2.2.1
+github.com/zmap/zlint/v2
+github.com/zmap/zlint/v2/lint
+github.com/zmap/zlint/v2/lints/apple
+github.com/zmap/zlint/v2/lints/cabf_br
+github.com/zmap/zlint/v2/lints/cabf_ev
+github.com/zmap/zlint/v2/lints/community
+github.com/zmap/zlint/v2/lints/etsi
+github.com/zmap/zlint/v2/lints/mozilla
+github.com/zmap/zlint/v2/lints/rfc
+github.com/zmap/zlint/v2/util
 # go.etcd.io/etcd v3.3.13+incompatible
 ## explicit
 go.etcd.io/etcd
@@ -379,21 +563,23 @@ golang.org/x/lint
 golang.org/x/lint/golint
 # golang.org/x/mod v0.3.0
 golang.org/x/mod/semver
-# golang.org/x/net v0.0.0-20200625001655-4c5254603344
+# golang.org/x/net v0.0.0-20201026091529-146b70c837a4
 ## explicit
 golang.org/x/net/context
+golang.org/x/net/context/ctxhttp
 golang.org/x/net/http/httpguts
+golang.org/x/net/http/httpproxy
 golang.org/x/net/http2
 golang.org/x/net/http2/hpack
 golang.org/x/net/idna
 golang.org/x/net/internal/timeseries
 golang.org/x/net/trace
-# golang.org/x/sys v0.0.0-20200615200032-f1bc736245b1
+# golang.org/x/sys v0.0.0-20210104204734-6f8348627aad
 golang.org/x/sys/cpu
 golang.org/x/sys/internal/unsafeheader
 golang.org/x/sys/unix
 golang.org/x/sys/windows
-# golang.org/x/text v0.3.2
+# golang.org/x/text v0.3.3
 golang.org/x/text/secure/bidirule
 golang.org/x/text/transform
 golang.org/x/text/unicode/bidi
@@ -429,7 +615,7 @@ golang.org/x/xerrors/internal
 google.golang.org/genproto/googleapis/api/httpbody
 google.golang.org/genproto/googleapis/rpc/status
 google.golang.org/genproto/protobuf/field_mask
-# google.golang.org/grpc v1.29.1
+# google.golang.org/grpc v1.31.0 => google.golang.org/grpc v1.26.0
 ## explicit
 google.golang.org/grpc
 google.golang.org/grpc/attributes
@@ -454,13 +640,10 @@ google.golang.org/grpc/internal/binarylog
 google.golang.org/grpc/internal/buffer
 google.golang.org/grpc/internal/channelz
 google.golang.org/grpc/internal/envconfig
-google.golang.org/grpc/internal/grpclog
 google.golang.org/grpc/internal/grpcrand
 google.golang.org/grpc/internal/grpcsync
-google.golang.org/grpc/internal/grpcutil
 google.golang.org/grpc/internal/resolver/dns
 google.golang.org/grpc/internal/resolver/passthrough
-google.golang.org/grpc/internal/status
 google.golang.org/grpc/internal/syscall
 google.golang.org/grpc/internal/transport
 google.golang.org/grpc/keepalive
@@ -554,3 +737,4 @@ honnef.co/go/tools/version
 # github.com/spf13/cobra => ./spf13/cobra
 # github.com/spf13/jwalterweatherman => ./spf13/jwalterweatherman
 # github.com/spf13/pflag => ./spf13/pflag
+# github.com/tjfoc/gmsm v1.3.2 => ./tjfoc/gmsm
