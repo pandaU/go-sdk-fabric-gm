@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/VoneChain-CS/fabric-sdk-go-gm/client"
+	"github.com/VoneChain-CS/fabric-sdk-go-gm/enroll"
 	"github.com/VoneChain-CS/fabric-sdk-go-gm/pkg/client/channel"
 	"github.com/VoneChain-CS/fabric-sdk-go-gm/pkg/client/ledger"
 	"github.com/VoneChain-CS/fabric-sdk-go-gm/pkg/client/msp"
@@ -72,22 +73,31 @@ func populateWallet(wallet *gateway.Wallet) error {
 
 	return wallet.Put("appUser", identity)
 }
+func main111() {
+	c := config.FromFile("C:\\Users\\MSI\\go\\src\\github.com\\hyperledger\\go-sdk-gm\\main\\config_test.yaml")
+	sdk, err := fabsdk.New(c)
+	if err != nil {
+		fmt.Printf("Failed to create new SDK: %s\n", err)
+		os.Exit(1)
+	}
+	defer sdk.Close()
+	clientChannelContext := sdk.ChannelContext(channelName, fabsdk.WithUser("admin"))
+	client, err := channel.New(clientChannelContext)
+	queryCC(client, []byte("a"))
 
+}
 func main() {
 	wallet, err := gateway.NewFileSystemWallet("wallet")
 	//if err != nil {
 	//	log.Fatalf("Failed to create wallet: %v", err)
 	//}
 	//err = populateWallet(wallet)
-	if !wallet.Exists("appUser") {
-		err = populateWallet(wallet)
-		if err != nil {
-			log.Fatalf("Failed to populate wallet contents: %v", err)
-		}
+	if !wallet.Exists("admin") {
+		enroll.Main()
 	}
 	gw, err := gateway.Connect(
 		gateway.WithConfig(config.FromFile("C:\\Users\\MSI\\Desktop\\fabric-sdk-gm\\fabric-sdk-go-gm-master\\main\\organizations\\peerOrganizations\\org1.xxzx.com\\connection-org1.yaml")),
-		gateway.WithIdentity(wallet, "appUser"),
+		gateway.WithIdentity(wallet, "admin"),
 	)
 	if err != nil {
 		log.Fatalf("Failed to connect to gateway: %v", err)

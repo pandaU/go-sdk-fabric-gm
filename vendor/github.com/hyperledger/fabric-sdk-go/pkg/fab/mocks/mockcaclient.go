@@ -23,8 +23,8 @@ func NewMockCAClient(orgName string, cryptoProvider core.CryptoSuite) (api.CACli
 }
 
 // Enroll enrolls a user with a Fabric network
-func (mgr *MockCAClient) Enroll(request *api.EnrollmentRequest) error {
-	return errors.New("not implemented")
+func (mgr *MockCAClient) Enroll(request *api.EnrollmentRequest) (string,string,string, error) {
+	return "","","",nil
 }
 
 // Reenroll re-enrolls a user

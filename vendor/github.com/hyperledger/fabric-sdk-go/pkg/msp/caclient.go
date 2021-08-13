@@ -123,21 +123,21 @@ func processCAClientOptions(opts ...CAClientOption) (*caClientOption, error) {
 //
 // enrollmentID The registered ID to use for enrollment
 // enrollmentSecret The secret associated with the enrollment ID
-func (c *CAClientImpl) Enroll(request *api.EnrollmentRequest) error {
+func (c *CAClientImpl) Enroll(request *api.EnrollmentRequest) (string,string,string, error) {
 
 	if c.adapter == nil {
-		return fmt.Errorf("no CAs configured for organization: %s", c.orgName)
+		return "","","",fmt.Errorf("no CAs configured for organization: %s", c.orgName)
 	}
 	if request.Name == "" {
-		return errors.New("enrollmentID is required")
+		return "","","",errors.New("enrollmentID is required")
 	}
 	if request.Secret == "" {
-		return errors.New("enrollmentSecret is required")
+		return "","","",errors.New("enrollmentSecret is required")
 	}
 	// TODO add attributes
-	cert, err := c.adapter.Enroll(request)
+	cert,key, err := c.adapter.Enroll(request)
 	if err != nil {
-		return errors.Wrap(err, "enroll failed")
+		return "","","",errors.Wrap(err, "enroll failed")
 	}
 	userData := &msp.UserData{
 		MSPID:                 c.orgMSPID,
@@ -145,10 +145,11 @@ func (c *CAClientImpl) Enroll(request *api.EnrollmentRequest) error {
 		EnrollmentCertificate: cert,
 	}
 	err = c.userStore.Store(userData)
+
 	if err != nil {
-		return errors.Wrap(err, "enroll failed")
+		return "","","",errors.Wrap(err, "enroll failed")
 	}
-	return nil
+	return string(cert),string(key),c.orgMSPID,nil
 }
 
 // CreateIdentity create a new identity with the Fabric CA server. An enrollment secret is returned which can then be used,
@@ -501,7 +502,7 @@ func (c *CAClientImpl) getRegistrar(enrollID string, enrollSecret string) (msp.S
 		}
 
 		// Attempt to enroll the registrar
-		err = c.Enroll(&api.EnrollmentRequest{Name: enrollID, Secret: enrollSecret})
+		_,_,_,err = c.Enroll(&api.EnrollmentRequest{Name: enrollID, Secret: enrollSecret})
 		if err != nil {
 			return nil, err
 		}

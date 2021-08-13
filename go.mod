@@ -22,7 +22,7 @@ require (
 	github.com/spf13/cast v1.3.1
 	github.com/spf13/viper v1.7.1
 	github.com/stretchr/testify v1.6.1
-	github.com/tjfoc/gmsm v1.4.0
+	github.com/tjfoc/gmsm v1.3.2
 	github.com/tjfoc/gmtls v1.2.1
 	go.etcd.io/etcd v3.3.13+incompatible // indirect
 	golang.org/x/crypto v0.0.0-20201016220609-9e8e0b390897

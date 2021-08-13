@@ -17,7 +17,6 @@ package msp
 
 import (
 	"fmt"
-
 	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab"
 
 	"strings"
@@ -356,8 +355,8 @@ func (c *Client) Enroll(enrollmentID string, opts ...EnrollmentOption) error {
 		}
 		req.AttrReqs = attrs
 	}
-
-	return ca.Enroll(req)
+	_, _, _, err =ca.Enroll(req)
+	return err
 }
 
 // Reenroll reenrolls an enrolled user in order to obtain a new signed X509 certificate

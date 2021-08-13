@@ -29,7 +29,7 @@ require (
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/spf13/viper v1.1.1
 	github.com/stretchr/testify v1.6.1
-	github.com/tjfoc/gmsm v1.4.0
+	github.com/tjfoc/gmsm v1.3.2
 	github.com/tw-bc-group/net-go-gm v0.0.0-20201030055721-5906b2d70408
 	golang.org/x/crypto v0.0.0-20201012173705-84dcc777aaee
 	golang.org/x/net v0.0.0-20201026091529-146b70c837a4
@@ -38,3 +38,6 @@ require (
 )
 
 go 1.14
+replace (
+	github.com/tjfoc/gmsm v1.3.2 => ../tjfoc/gmsm
+)

@@ -24,8 +24,6 @@ import (
 	"crypto/x509"
 	"encoding/pem"
 	"errors"
-	"io/ioutil"
-	"os"
 	"strconv"
 )
 
@@ -265,13 +263,13 @@ func ReadKeyFromMem(data []byte, pwd []byte) (SM4Key, error) {
 	return block.Bytes, nil
 }
 
-func ReadKeyFromPem(FileName string, pwd []byte) (SM4Key, error) {
-	data, err := ioutil.ReadFile(FileName)
-	if err != nil {
-		return nil, err
-	}
-	return ReadKeyFromMem(data, pwd)
-}
+//func ReadKeyFromPem(FileName string, pwd []byte) (SM4Key, error) {
+//	data, err := ioutil.ReadFile(FileName)
+//	if err != nil {
+//		return nil, err
+//	}
+//	return ReadKeyFromMem(data, pwd)
+//}
 
 func WriteKeytoMem(key SM4Key, pwd []byte) ([]byte, error) {
 	if pwd != nil {
@@ -290,33 +288,33 @@ func WriteKeytoMem(key SM4Key, pwd []byte) ([]byte, error) {
 	}
 }
 
-func WriteKeyToPem(FileName string, key SM4Key, pwd []byte) (bool, error) {
-	var block *pem.Block
-
-	if pwd != nil {
-		var err error
-		block, err = x509.EncryptPEMBlock(rand.Reader,
-			"SM4 ENCRYPTED KEY", key, pwd, x509.PEMCipherAES256)
-		if err != nil {
-			return false, err
-		}
-	} else {
-		block = &pem.Block{
-			Type:  "SM4 KEY",
-			Bytes: key,
-		}
-	}
-	file, err := os.Create(FileName)
-	if err != nil {
-		return false, err
-	}
-	defer file.Close()
-	err = pem.Encode(file, block)
-	if err != nil {
-		return false, nil
-	}
-	return true, nil
-}
+//func WriteKeyToPem(FileName string, key SM4Key, pwd []byte) (bool, error) {
+//	var block *pem.Block
+//
+//	if pwd != nil {
+//		var err error
+//		block, err = x509.EncryptPEMBlock(rand.Reader,
+//			"SM4 ENCRYPTED KEY", key, pwd, x509.PEMCipherAES256)
+//		if err != nil {
+//			return false, err
+//		}
+//	} else {
+//		block = &pem.Block{
+//			Type:  "SM4 KEY",
+//			Bytes: key,
+//		}
+//	}
+//	file, err := os.Create(FileName)
+//	if err != nil {
+//		return false, err
+//	}
+//	defer file.Close()
+//	err = pem.Encode(file, block)
+//	if err != nil {
+//		return false, nil
+//	}
+//	return true, nil
+//}
 
 func (k KeySizeError) Error() string {
 	return "SM4: invalid key size " + strconv.Itoa(int(k))

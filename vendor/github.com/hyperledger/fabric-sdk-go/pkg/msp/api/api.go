@@ -17,7 +17,7 @@ var (
 
 // CAClient provides management of identities in a Fabric network
 type CAClient interface {
-	Enroll(request *EnrollmentRequest) error
+	Enroll(request *EnrollmentRequest) (string,string,string, error)
 	Reenroll(request *ReenrollmentRequest) error
 	Register(request *RegistrationRequest) (string, error)
 	Revoke(request *RevocationRequest) (*RevocationResponse, error)
